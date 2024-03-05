@@ -36,7 +36,7 @@ resource "azurerm_virtual_network" "vnet" {
 
 # Create a storage accoun
 resource "azurerm_storage_account" "storage" {
-  name                     = "jwhacks-storage"
+  name                     = "jwhacksstorage"
   resource_group_name      = azurerm_resource_group.rg.name
   location                 = "westus2"
   account_tier             = "Standard"
