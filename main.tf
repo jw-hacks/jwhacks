@@ -33,5 +33,12 @@ resource "azurerm_virtual_network" "vnet" {
   location            = "westus2"
   resource_group_name = azurerm_resource_group.rg.name
 }
-  value = "${aws_instance.web.public_dns}:8080"
+
+# Create a storage accoun
+resource "azurerm_storage_account" "storage" {
+  name                     = "jwhacks-storage"
+  resource_group_name      = azurerm_resource_group.rg.name
+  location                 = "westus2"
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
 }
