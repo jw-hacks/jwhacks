@@ -49,6 +49,5 @@ resource "azurerm_storage_account" "storage" {
 
   custom_domain {
     name = "www.jwhacks.com"
-    use_subdomain = true
   }
 }
